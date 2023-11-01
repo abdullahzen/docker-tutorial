@@ -1,6 +1,5 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const jwksRsa = require('jwks-rsa');
 const fs = require('fs');
 
 const app = express();
