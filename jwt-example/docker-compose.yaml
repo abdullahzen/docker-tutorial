@@ -1,0 +1,23 @@
+version: '3.6'
+services:
+  authentication-server:
+    image: jwt-image
+    build: ./authentication-server
+    # volumes:
+    #   - /home/azin/cyber/docker-test/authentication-server/app.js:/usr/src/app/app.js
+    ports:
+      - 80:3000
+  orders-server:
+    image: orders-image
+    build: ./orders-server
+    # volumes:
+    #   - /home/azin/cyber/docker-test/orders-server/app.js:/usr/src/app/app.js
+    ports:
+      - 81:3000
+  payments-server:
+    image: payments-image
+    build: ./payments-server
+    ports:
+      - 82:3000
+    # volumes:
+    #   - /home/azin/cyber/docker-test/payments-server/app.js:/usr/src/app/app.js
